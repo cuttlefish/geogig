@@ -16,6 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.forward_agent = true
 
   config.vm.provider "virtualbox" do |vb|
+    #vb.gui = true # this should generally be disabled
     vb.memory = 2048
     vb.cpus = 2
   end
@@ -29,9 +30,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       yum update -y
       /etc/init.d/vboxadd setup
 
-      ## Install Java
+      ### Install Java
       #yum install -y wget && wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u5-b13/jdk-8u5-linux-x64.rpm
-      rpm -ivh jdk-8u5-linux-x64.rpm && rm jdk-8u5-linux-x64.rpm
+      #rpm -ivh jdk-8u5-linux-x64.rpm && rm jdk-8u5-linux-x64.rpm
       yum install -y wget && wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/7u71-b14/jdk-7u71-linux-x64.rpm
       rpm -ivh jdk-7u71-linux-x64.rpm && rm jdk-7u71-linux-x64.rpm
 
@@ -57,6 +58,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       echo 'Removing the temporary directory...'
       rm -r "$TEMPORARY_DIRECTORY"
       echo 'Your Maven Installation is Complete.'
+
+      ### Other dependencies
+      # Use the postgres RPM repo
+      rpm -ivh http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
+      yum install -y proj-devel
+      yum install -y geos-devel
+
+      ### Utils
+      yum install -y git
 SCRIPT
     centos.vm.provision "shell", inline: script
   end
@@ -71,7 +81,11 @@ SCRIPT
       apt-get upgrade -y
       /etc/init.d/vboxadd setup
       wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java7_64.sh && bash equip_java7_64.sh
-      apt-get install maven -y
+      apt-get install -y maven
+
+      # Other dependencies
+      apt-get install -y libgeos-dev
+      apt-get install -y libproj0
 SCRIPT
     ubuntu.vm.provision "shell", inline: script
   end
