@@ -7,10 +7,10 @@
  * Contributors:
  * Gabriel Roldan (Boundless) - initial implementation
  */
-package org.locationtech.geogig.rocksdb.performance;
+package org.locationtech.geogig.storage.rocksdb.performance;
 
 import org.locationtech.geogig.repository.Platform;
-import org.locationtech.geogig.rocksdb.RocksdbObjectStore;
+import org.locationtech.geogig.storage.rocksdb.RocksdbObjectStore;
 import org.locationtech.geogig.storage.ConfigDatabase;
 import org.locationtech.geogig.storage.ObjectStore;
 import org.locationtech.geogig.test.performance.AbstractObjectStoreStressTest;

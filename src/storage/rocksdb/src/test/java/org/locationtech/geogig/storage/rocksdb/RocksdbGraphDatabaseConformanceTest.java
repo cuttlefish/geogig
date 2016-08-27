@@ -7,7 +7,7 @@
  * Contributors:
  * Gabriel Roldan (Boundless) - initial implementation
  */
-package org.locationtech.geogig.rocksdb;
+package org.locationtech.geogig.storage.rocksdb;
 
 import java.io.File;
 

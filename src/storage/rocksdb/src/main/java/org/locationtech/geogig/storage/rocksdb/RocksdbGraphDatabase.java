@@ -7,11 +7,11 @@
  * Contributors:
  * Gabriel Roldan (Boundless) - initial implementation
  */
-package org.locationtech.geogig.rocksdb;
+package org.locationtech.geogig.storage.rocksdb;
 
 import static com.google.common.base.Throwables.propagate;
-import static org.locationtech.geogig.rocksdb.RocksdbStorageProvider.FORMAT_NAME;
-import static org.locationtech.geogig.rocksdb.RocksdbStorageProvider.VERSION;
+import static org.locationtech.geogig.storage.rocksdb.RocksdbStorageProvider.FORMAT_NAME;
+import static org.locationtech.geogig.storage.rocksdb.RocksdbStorageProvider.VERSION;
 
 import java.io.DataInput;
 import java.io.DataOutput;
