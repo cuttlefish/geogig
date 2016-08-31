@@ -27,7 +27,7 @@
     </dependency>
     <dependency>
       <groupId>org.locationtech.geogig</groupId>
-      <artifactId>geogig-bdbje</artifactId>
+      <artifactId>geogig-rocksdb</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -153,7 +153,7 @@
     </dependency>
     <dependency>
       <groupId>org.locationtech.geogig</groupId>
-      <artifactId>geogig-bdbje</artifactId>
+      <artifactId>geogig-rocksdb</artifactId>
       <version>${project.version}</version>
       <classifier>tests</classifier>
       <scope>test</scope>

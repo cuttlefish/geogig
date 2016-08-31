@@ -24,7 +24,7 @@ import org.locationtech.geogig.storage.PluginDefaults;
 import org.locationtech.geogig.storage.RefDatabase;
 import org.locationtech.geogig.storage.StorageProvider;
 import org.locationtech.geogig.storage.VersionedFormat;
-import org.locationtech.geogig.storage.bdbje.JEStorageProviderV02;
+import org.locationtech.geogig.storage.rocksdb.RocksdbStorageProvider;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
@@ -48,7 +48,7 @@ public class CLIContextBuilder extends ContextBuilder {
         @Override
         protected void configure() {
 
-            final PluginDefaults defaults = new PluginDefaults(new JEStorageProviderV02());
+            final PluginDefaults defaults = new PluginDefaults(new RocksdbStorageProvider());
             bind(PluginDefaults.class).toInstance(defaults);
 
             MapBinder<VersionedFormat, RefDatabase> refPlugins = MapBinder
