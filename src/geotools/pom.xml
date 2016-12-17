@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.locationtech.geogig</groupId>
     <artifactId>geogig</artifactId>
-    <version>1.0-RC4</version>
+    <version>1.0-RCtest</version>
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
@@ -63,7 +63,7 @@
         </exclusion>
       </exclusions>
     </dependency>
-    
+
     <dependency>
       <groupId>org.geotools</groupId>
       <artifactId>gt-geopkg</artifactId>
@@ -107,7 +107,7 @@
         </exclusion>
       </exclusions>
     </dependency>
-    
+
     <dependency>
       <!-- http://jcommander.org/ -->
       <groupId>com.beust</groupId>
@@ -178,7 +178,7 @@
       <dependencies>
         <dependency>
           <groupId>com.oracle</groupId>
-          <artifactId>ojdbc14</artifactId> 
+          <artifactId>ojdbc14</artifactId>
           <version>10.2.0.3.0</version>
         </dependency>
       </dependencies>

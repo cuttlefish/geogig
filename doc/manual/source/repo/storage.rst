@@ -18,7 +18,7 @@ Default storage backend
 
 Up to 1.0-RC3, the default storage backend was a BerkeleyDB Java Edition key/value database for the main repository elements such as the revision and graph objects, and simple text files for configuration settings, refs, and merge conflicts.
 
-As of 1.0-RC4, the BerkeleyDB database was replaced by a better performing database, Rocksdb. Nonetheless, repositories created with the BerkeleyDB storage backend will still be supported through GeoGig's plug-in mechanism.
+As of 1.0-RCtest, the BerkeleyDB database was replaced by a better performing database, Rocksdb. Nonetheless, repositories created with the BerkeleyDB storage backend will still be supported through GeoGig's plug-in mechanism.
 
 When a repository is created in the local filesystem, it uses a directory structure like the following:
 

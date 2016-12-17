@@ -48,7 +48,7 @@ copyright = u'2013, GeoGig Contributors'
 # built documents.
 #
 # The short X.Y version.
-version = '1.0-RC4'
+version = '1.0-RCtest'
 # The full version, including alpha/beta/rc tags.
 release = '1.0'
 
@@ -114,7 +114,7 @@ html_title = project + " " + release + " " + manual
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'favicon.ico' 
+html_favicon = 'favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -137,16 +137,16 @@ html_static_path = ['_static']
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-#html_domain_indices = False 
+#html_domain_indices = False
 
 # If false, no index is generated.
-#html_use_index = False 
+#html_use_index = False
 
 # If true, the index is split into individual pages for each letter.
 #html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
-#html_show_sourcelink = False 
+#html_show_sourcelink = False
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #html_show_sphinx = True
